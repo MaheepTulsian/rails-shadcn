@@ -1,4 +1,3 @@
-
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require "shadcn/version"
@@ -6,28 +5,24 @@ require "shadcn/version"
 Gem::Specification.new do |spec|
   spec.name          = "shadcn"
   spec.version       = Shadcn::VERSION
-  spec.authors       = ["TODO: Write your name"]
-  spec.email         = ["TODO: Write your email address"]
+  spec.authors       = ["Maheep Tulsian"]
+  spec.email         = ["maheep2403@gmail.com"]
 
-  spec.summary       = %q{TODO: Write a short summary, because RubyGems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = %q{Rails wrapper for shadcn/ui — install and manage shadcn components in Rails with one command.}
+  spec.description   = %q{A Ruby gem that integrates shadcn/ui into Rails applications. Provides generators to set up Tailwind and import shadcn components without manual configuration.}
+  spec.homepage      = "https://github.com/MaheepTulsian/rails-shadcn"
 
-  # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
-  # to allow pushing to a single host or delete this section to allow pushing to any host.
   if spec.respond_to?(:metadata)
-    spec.metadata["allowed_push_host"] = "TODO: Set to 'http://mygemserver.com'"
+    # Optional: remove if not restricting push hosts
+    # spec.metadata["allowed_push_host"] = "http://mygemserver.com"
 
     spec.metadata["homepage_uri"] = spec.homepage
-    spec.metadata["source_code_uri"] = "TODO: Put your gem's public repo URL here."
-    spec.metadata["changelog_uri"] = "TODO: Put your gem's CHANGELOG.md URL here."
+    spec.metadata["source_code_uri"] = "https://github.com/MaheepTulsian/rails-shadcn"
+    spec.metadata["changelog_uri"] = "https://github.com/MaheepTulsian/rails-shadcn/blob/main/CHANGELOG.md"
   else
-    raise "RubyGems 2.0 or newer is required to protect against " \
-      "public gem pushes."
+    raise "RubyGems 2.0 or newer is required to protect against public gem pushes."
   end
 
-  # Specify which files should be added to the gem when it is released.
-  # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
   spec.files         = Dir.chdir(File.expand_path('..', __FILE__)) do
     `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
   end

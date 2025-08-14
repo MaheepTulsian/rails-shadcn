@@ -2,5 +2,9 @@ require "shadcn/version"
 
 module Shadcn
   class Error < StandardError; end
-  # Your code goes here...
+end
+
+# Load generators if Rails is present
+if defined?(Rails)
+  require "shadcn/railtie"
 end
