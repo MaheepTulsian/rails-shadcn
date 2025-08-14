@@ -14,6 +14,7 @@ module Shadcn
     def copy_configs
       copy_file "tailwind.config.js", "tailwind.config.js", force: true
       copy_file "postcss.config.js", "postcss.config.js", force: true
+      copy_file "application.tailwind.css", "app/assets/stylesheets/application.tailwind.css"
     end
 
     def install_npm_packages

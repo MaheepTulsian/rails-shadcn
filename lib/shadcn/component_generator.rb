@@ -1,5 +1,3 @@
-require "rails/generators"
-
 module Shadcn
   class ComponentGenerator < Rails::Generators::NamedBase
     source_root File.expand_path("../../templates/components", __FILE__)
